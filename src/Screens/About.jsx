@@ -75,7 +75,7 @@ export const About = () => {
           <div className="flex-shrink-0 mb-6 md:mb-0">
             <img
               className="w-34 h-56 md:w-64 md:h-80 rounded-lg shadow-lg object-cover object-top mx-auto md:mx-0"
-              src="src/images/LABAJO ANGELIKA LOUISE-PLM-FILI-0103 (EDITED).JPG"
+              src="/images/LABAJO ANGELIKA LOUISE-PLM-FILI-0103 (EDITED).JPG"
               alt="Profile"
             />
           </div>
