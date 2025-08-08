@@ -59,7 +59,7 @@ export const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className='px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-xs lg:text-sm font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200'
+                  className='px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-xs sm:text-2xs md:text-sm lg:text-sm  font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200'
                 >
                   {skill}
                 </span>
