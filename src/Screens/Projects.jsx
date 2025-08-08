@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/Components/ui/carousel"
+} from "@/Components/UI/Carousel"
 
 const projects = [
     {
