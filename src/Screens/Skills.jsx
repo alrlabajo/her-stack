@@ -6,9 +6,11 @@ export const Skills = () => {
     <>
      <section id="skills" className="min-h-[calc(100vh-80px)] flex items-center justify-center py-4 px-4 sm:px-6 lg:px-14 mt-20">
       <div className="w-full mx-auto px-6 sm:px-6 md:px-12 lg:px-14">
-        <h1 className="text-black dark:text-white text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8">
+        <h1 className="text-black dark:text-white text-4xl sm:text-5xl lg:text-7xl font-bold mb-2 sm:mb-4">
           Skills<span className="text-violet-500">.</span>
         </h1>
+        <p className="text-gray-700 dark:text-gray-300 text-xs sm:text-lg lg:text-xl mb-8">
+          With knowledge and/or experience</p>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8'>
             <div >
               <h2 className="text-lg font-semibold mb-4 underline dark:text-white text-black">Tools & Technologies</h2>

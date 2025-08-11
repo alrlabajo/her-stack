@@ -67,7 +67,16 @@ and promote their events using Python Django.`,
         long:`A website I created using HTML, TailwindCSS and ReactJS to practice my frontend skills more. With the use of Github API to fetch the user data.`,
         role:"Programmer",
         techstack:["REACT","HTML5","TAILWINDCSS","GITHUB API","GIT"],
-        image:"images/profinder.png",
+        image:"images/git.gif",
+        link:"",
+    },
+        {
+        title: "4th of July Portfolio",
+        short: "A personal portfolio website.",
+        long:`A personal portfolio website I created using HTML, TailwindCSS and ReactJS to showcase 4th of July's works.`,
+        role:"Programmer",
+        techstack:["REACT","HTML5","TAILWINDCSS"],
+        image:"images/4th.gif",
         link:"",
     },
 ]
@@ -134,8 +143,8 @@ export const Projects = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
+          <CarouselPrevious className="hidden sm:flex dark:text-white" />
+          <CarouselNext className="hidden sm:flex dark:text-white" />
         </Carousel>
 
 
