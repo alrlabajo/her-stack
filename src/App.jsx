@@ -1,29 +1,28 @@
-import './App.css'
-import { Navbar } from './Components/Navbar'
-import { Hero } from './Screens/Hero'
-import { Background } from './Backgrounds/Background'
-import { About } from './Screens/About'
-import { Skills } from './Screens/Skills'
-import { Contact } from './Screens/Contact'
-import { Projects } from './Screens/Projects'
+import "./App.css";
+import Navbar  from "./Components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./Screens/Hero";
+import About from "./Screens/About";
+import Skills from "./Screens/Skills";
+import Projects from "./Screens/Projects";
+import Contact from "./Screens/Contact";
 
 function App() {
   return (
-    <>
-      <div className="relative min-h-screen bg-white/90 dark:bg-black/90 py-12 sm:py-16 lg:py-20">
-        <Background />
-
-        <div className="relative z-10">
-          <Navbar/>
-          <Hero/>
-          <About/>
-          <Skills/>
-          <Projects/>
-          <Contact/>
-        </div>
+    <Router>
+      <div className="flex items-center w-full max-w-4xl mx-auto">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/home" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

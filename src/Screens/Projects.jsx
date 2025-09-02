@@ -107,6 +107,15 @@ and promote their events using Python Django.`,
     image: "images/Board-2.png",
     link: "",
   },
+  {
+    title: "Trackly",
+    short: "Track your expenses, income, and savings all in one app.",
+    long: `A web application that helps users manage their personal finances by tracking expenses, income, and savings in one convenient platform. Designed to provide insights and promote better financial habits.`,
+    role: "Fullstack Developer",
+    techstack: ["MONGODB", "EXPRESSJS", 'REACTJS', 'NODEJS', 'TAILWINDCSS'],
+    image: "images/trackly.gif",
+    link: "",
+  },
 ];
 
 export const Projects = () => {
@@ -117,16 +126,13 @@ export const Projects = () => {
 
   return (
     <>
-      <section
-        id="projects"
-        className="min-h-[calc(100vh-80px)] flex items-center justify-center py-4 px-4 sm:px-6 lg:px-14 mt-20"
-      >
-        <div className="w-full mx-auto px-6 sm:px-6 md:px-12 lg:px-14">
-          <h1 className="text-black dark:text-white text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 font-sans">
+      <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-4 px-4 sm:px-6 lg:px-14 mt-16 w-full max-w-4xl ">
+        <div className="w-full">
+          <h1 className="text-black dark:text-white text-4xl font-bold mb-6 sm:mb-8 text-center">
             Projects<span className="text-violet-500">.</span>
           </h1>
 
-          <Carousel className="w-full max-w-7xl mx-auto">
+          <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent className="-ml-1">
               {projects.map((project, index) => (
                 <CarouselItem
@@ -135,19 +141,19 @@ export const Projects = () => {
                 >
                   <div className="p-1 h-full">
                     <div
-                      className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 hover:bg-white/20 dark:hover:bg-gray-900/70 transition-all duration-300 cursor-pointer border border-gray-200/20 h-full flex flex-col"
+                      className="bg-neutral-100/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 hover:bg-white/20 dark:hover:bg-gray-900/70 transition-all duration-300 cursor-pointer border border-gray-200/20 h-full flex flex-col"
                       onClick={() => openModal(project)}
                     >
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg mb-3 sm:mb-4 flex-shrink-0"
+                        className="w-full h-32 object-cover rounded-lg mb-3 sm:mb-4 flex-shrink-0"
                       />
                       <div className="flex-grow flex flex-col">
-                        <h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-2 sm:mb-3 font-sans line-clamp-2">
+                        <h3 className="text-base font-bold text-black dark:text-white mb-2 sm:mb-3 line-clamp-2">
                           {project.title}
                         </h3>
-                        <p className="text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 font-sans text-xs sm:text-sm flex-grow line-clamp-3">
+                        <p className="text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 text-xs flex-grow line-clamp-3">
                           {project.short}
                         </p>
                         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
@@ -156,19 +162,19 @@ export const Projects = () => {
                             .map((tech, techIndex) => (
                               <span
                                 key={techIndex}
-                                className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-xs sm:text-xs font-medium font-sans"
+                                className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[8px] font-medium"
                               >
                                 {tech}
                               </span>
                             ))}
                           {project.techstack.length > 3 && (
-                            <span className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-gray-300/30 dark:bg-gray-700/30 text-gray-700 dark:text-gray-300 rounded-full text-xs sm:text-xs font-medium font-sans">
+                            <span className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-gray-300/30 dark:bg-gray-700/30 text-gray-700 dark:text-gray-300 rounded-full text-[8px] font-medium">
                               +{project.techstack.length - 3}
                             </span>
                           )}
                         </div>
                         <div className="flex items-center justify-between mt-auto">
-                          <span className="text-xs sm:text-sm text-violet-600 dark:text-violet-400 font-medium font-sans">
+                          <span className="text-xs text-violet-600 dark:text-violet-400 font-medium">
                             {project.role}
                           </span>
                           <Icon
@@ -199,30 +205,30 @@ export const Projects = () => {
                   onClick={closeModal}
                   className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 z-10 bg-white/80 dark:bg-gray-900/80 rounded-full p-1"
                 >
-                  <Icon icon="tabler:x" className="text-xl sm:text-2xl" />
+                  <Icon icon="tabler:x" className="text-xl" />
                 </button>
 
-                <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2 sm:mb-3 font-sans pr-8">
+                <h2 className="text-xl font-bold text-black dark:text-white mb-2 sm:mb-3 pr-8">
                   {selectedProject.title}
                 </h2>
 
-                <p className="text-violet-600 dark:text-violet-400 font-medium mb-3 sm:mb-4 font-sans text-sm sm:text-base">
+                <p className="text-violet-600 dark:text-violet-400 font-medium mb-3 sm:mb-4 text-sm">
                   {selectedProject.role}
                 </p>
 
-                <p className="text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed font-sans text-sm sm:text-base">
+                <p className="text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed text-xs">
                   {selectedProject.long}
                 </p>
 
                 <div className="mb-4">
-                  <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 font-sans">
+                  <h3 className="text-sm font-semibold text-black dark:text-white mb-2">
                     Tech Stack:
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.techstack.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-xs sm:text-sm font-medium font-sans"
+                        className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[10px] font-medium"
                       >
                         {tech}
                       </span>
@@ -230,14 +236,14 @@ export const Projects = () => {
                     <img
                       src={selectedProject.image}
                       alt={selectedProject.title}
-                      className="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg mb-3 sm:mb-4"
+                      className="w-full h-24 sm:h-40 lg:h-48 object-cover rounded-lg mb-3 sm:mb-4"
                     />
                   </div>
                 </div>
                 {selectedProject.link && selectedProject.link.trim() !== "" && (
                   <button
                     onClick={() => window.open(selectedProject.link, "_blank")}
-                    className="mt-4 w-full bg-violet-600 dark:bg-violet-500 text-white rounded-lg py-2 font-medium font-sans hover:bg-violet-700 dark:hover:bg-violet-400"
+                    className="mt-4 w-full bg-violet-600 dark:bg-violet-500 text-white rounded-lg py-2 font-medium hover:bg-violet-700 dark:hover:bg-violet-400"
                   >
                     View Project
                   </button>
@@ -246,7 +252,9 @@ export const Projects = () => {
             </div>
           )}
         </div>
-      </section>
+      </div>
     </>
   );
 };
+
+export default Projects;

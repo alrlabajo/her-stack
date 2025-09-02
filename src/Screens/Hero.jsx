@@ -1,27 +1,28 @@
-import React from 'react'
-import TextPressure from '../TextAnimations/TextPressure/TextPressure';
+import React from "react";
+import TextType from "../TextAnimations/TextType/TextType";
 
-export const Hero = () => {
+const Hero = () => {
   return (
-    <>
-    <section id="home" className="min-h-[calc(100vh-80px)] flex items-center justify-center py-4 px-4 sm:px-6 lg:px-14 mt-20">
-        <article className="flex flex-col items-center justify-center space-y-4 sm:space-y-8 w-full px-4 sm:px-6 md:px-10">
-           <TextPressure
-              text="She Builds. She Leads."
-              flex={true}
-              alpha={false}
-              stroke={false}
-              width={true}
-              weight={true}
-              italic={true}
-              minFontSize={28}
-              textColor="text-black dark:text-white"
-              className="text-center text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight"
-            />
-        <p className="text-gray-600 dark:text-gray-400 italic text-base sm:text-lg md:text-xl lg:text-2xl text-center max-w-2xl">
-        Code. Create. Inspire.</p>
-        </article>
-    </section>
-    </>
-  )
-}
+    <div className="min-h-screen flex items-center justify-center w-full">
+      <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-2 px-4 sm:px-6 lg:px-14 text-gray-950 dark:text-white">
+        <div className="w-full">
+          <TextType
+            text={["she builds.", "she leads."]}
+            typingSpeed={120}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+            className="text-4xl sm:text-5xl md:text-6xl font-semibold text-left"
+          />
+        </div>
+        <div className="w-full mt-8 sm:mt-10">
+          <h1 className="text-base sm:text-lg md:text-xl font-regular text-left text-violet-500">
+            code. create. inspire
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
