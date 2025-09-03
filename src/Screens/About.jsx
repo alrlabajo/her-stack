@@ -83,7 +83,7 @@ const About = () => {
               <div className="flex-1">
                 <p className="text-gray-700 dark:text-gray-300 text-[13px] leading-relaxed">
                   By combining design thinking, front-end development, and project management, it is my goal to build digital experiences that are not only functional and user-friendly, but also delivered efficiently and on time.
-                  <span className='text-violet-500 font-semibold'> PS. I like purple.</span>
+                  <span className='text-violet-500 font-semibold'> PS. I like purple</span> and Monsta X.
                 </p>
               </div>
             </div>

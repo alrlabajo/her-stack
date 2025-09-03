@@ -128,9 +128,12 @@ export const Projects = () => {
     <>
       <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-4 px-4 sm:px-6 lg:px-14 mt-16 w-full max-w-4xl ">
         <div className="w-full">
-          <h1 className="text-black dark:text-white text-4xl font-bold mb-6 sm:mb-8 text-center">
+          <h1 className="text-black dark:text-white text-5xl font-bold mb-2 sm:mb-4 text-center">
             Projects<span className="text-violet-500">.</span>
           </h1>
+          <p className="text-gray-700 dark:text-gray-300 text-sm mb-8 text-center">
+            These projects are combination of my school and personal work. On my free time, I like to create projects that would help solve problems and benefit me and others.
+          </p>
 
           <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent className="-ml-1">
