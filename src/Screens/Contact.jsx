@@ -2,35 +2,41 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center w-full">
-      <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-2 px-6">
+    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center w-full px-2 sm:px-6">
+      <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-2">
         <div className="w-full">
-          <h1 className="text-6xl font-semibold text-left text-gray-950 dark:text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-center sm:text-left text-gray-950 dark:text-white">
             Get in touch.
           </h1>
         </div>
-        <div className="w-full mt-6 text-right text-xl">
+        <div className="w-full mt-6 flex flex-col items-center gap-3 text-base sm:flex-row sm:justify-end sm:gap-0 sm:text-xl text-right">
           <a
-            href="mailto:alrlabajo@gamil.com"
+            href="mailto:alrlabajo@gmail.com"
             className="text-violet-500 hover:underline"
           >
             email
           </a>
-          <span className="mx-2 text-gray-950 dark:text-white">|</span>
+          <span className="mx-2 text-gray-950 dark:text-white hidden sm:inline">
+            |
+          </span>
           <a
             href="https://www.linkedin.com/in/likeslabajo"
             className="text-violet-500 hover:underline"
           >
             linkedin
           </a>
-          <span className="mx-2 text-gray-950 dark:text-white">|</span>
+          <span className="mx-2 text-gray-950 dark:text-white hidden sm:inline">
+            |
+          </span>
           <a
             href="https://github.com/alrlabajo"
             className="text-violet-500 hover:underline"
           >
             github
           </a>
-          <span className="mx-2 text-gray-950 dark:text-white">|</span>
+          <span className="mx-2 text-gray-950 dark:text-white hidden sm:inline">
+            |
+          </span>
           <a
             href="https://facebook.com/chkkngs"
             className="text-violet-500 hover:underline"

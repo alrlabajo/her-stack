@@ -46,7 +46,7 @@ const Navbar = () => {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden md:block"
-          } fixed inset-0 bg-neutral-50/70 dark:bg-zinc-950 backdrop-blur-sm z-20 flex flex-col items-center justify-center md:relative md:bg-transparent md:backdrop-blur-none md:flex md:justify-center md:flex-row`}
+          } fixed inset-0 bg-neutral-50 dark:bg-zinc-950 backdrop-blur-sm z-20 flex flex-col items-center justify-center md:relative md:bg-transparent md:backdrop-blur-none md:flex md:justify-center md:flex-row`}
         >
           <ul className="flex flex-col items-center md:flex-row md:space-y-0 gap-x-7">
             {Menu.map((item) => (

@@ -14,7 +14,7 @@ const Skills = () => {
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             <div>
-              <h2 className="text-lg font-semibold mb-4 underline dark:text-white text-black">
+              <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
                 Tools & Technologies
               </h2>
               <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
@@ -131,13 +131,13 @@ const Skills = () => {
                   className="text-xl transition-transform duration-300 transform hover:scale-110 dark:text-white text-black"
                 />
                 <Icon
-                  icon="simple-icons:postman"
+                  icon="devicon:postman"
                   className="text-xl transition-transform duration-300 transform hover:scale-110 dark:text-white text-black"
                 />
               </div>
             </div>
             <div>
-              <h2 className="text-lg font-semibold mb-4 underline dark:text-white text-black">
+              <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
                 Technical Skills
               </h2>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -154,7 +154,7 @@ const Skills = () => {
                 ].map((skill, index) => (
                   <span
                     key={index}
-                    className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[10px] font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200"
+                    className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[9px] font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200"
                   >
                     {skill}
                   </span>
@@ -162,7 +162,7 @@ const Skills = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-lg font-semibold mb-4 underline dark:text-white text-black">
+              <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
                 Soft Skills
               </h2>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -178,7 +178,7 @@ const Skills = () => {
                 ].map((skill, index) => (
                   <span
                     key={index}
-                    className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[10px] font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200"
+                    className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[9px] font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200"
                   >
                     {skill}
                   </span>
