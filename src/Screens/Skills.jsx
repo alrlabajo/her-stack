@@ -42,11 +42,11 @@ const Skills = () => {
               />
               <Icon
                 icon="simple-icons:gitforwindows"
-                className="text-gray-800 dark:text-white text-xl transition-transform duration-300 transform hover:scale-110"
+                className="text-xl transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
                 icon="simple-icons:github"
-                className="text-gray-800 dark:text-white text-xl transition-transform duration-300 transform hover:scale-110"
+                className="text-xl transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
                 icon="logos:tailwindcss-icon"
