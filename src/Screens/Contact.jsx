@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="min-h-[calc(100vh-80px)] flex items-center justify-center w-full px-2 sm:px-6">
       <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-2">
         <div className="w-full">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-center sm:text-left text-gray-950 dark:text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-center sm:text-left">
             Get in touch<span className="text-violet-500">.</span>
           </h1>
         </div>
@@ -16,7 +16,7 @@ const Contact = () => {
           >
             email
           </a>
-          <span className="mx-2 text-gray-950 dark:text-white hidden sm:inline">
+          <span className="mx-2 hidden sm:inline">
             |
           </span>
           <a
@@ -25,7 +25,7 @@ const Contact = () => {
           >
             linkedin
           </a>
-          <span className="mx-2 text-gray-950 dark:text-white hidden sm:inline">
+          <span className="mx-2 hidden sm:inline">
             |
           </span>
           <a
@@ -34,7 +34,7 @@ const Contact = () => {
           >
             github
           </a>
-          <span className="mx-2 text-gray-950 dark:text-white hidden sm:inline">
+          <span className="mx-2 hidden sm:inline">
             |
           </span>
           <a

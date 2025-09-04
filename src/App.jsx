@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar  from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./Screens/Hero";
 import About from "./Screens/About";
@@ -10,7 +10,7 @@ import Contact from "./Screens/Contact";
 function App() {
   return (
     <Router>
-      <div className="flex items-center w-full max-w-4xl mx-auto">
+      <div className="flex items-center w-full max-w-4xl mx-auto min-h-screen">
         <Navbar />
         <Routes>
           <Route path="/" element={<Hero />} />

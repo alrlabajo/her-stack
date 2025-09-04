@@ -6,17 +6,17 @@ const Skills = () => {
     <div className="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center w-full max-w-4xl mx-auto my-10 px-4 sm:px-6 lg:px-14">
       <div className="w-full">
         <div className="flex flex-col sm:flex-row items-center my-8 gap-4 sm:gap-6 lg:gap-10">
-          <h1 className="text-6xl lg:text-8xl font-semibold text-black dark:text-white leading-none">
+          <h1 className="text-6xl lg:text-8xl font-semibold leading-none">
             Skills<span className="text-violet-500">.</span>
           </h1>
-          <p className="text-xs text-neutral-600 dark:text-neutral-200 leading-relaxed lg:mt-12 max-w-2xl">
+          <p className="text-xs leading-relaxed lg:mt-12 max-w-2xl">
             These are some of the tools, technologies, and skills I've acquired and honed over time
             through various projects, coursework, and experiences.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           <div>
-            <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
+            <h2 className="text-sm font-semibold mb-4 underline">
               Tools & Technologies
             </h2>
             <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
@@ -86,11 +86,11 @@ const Skills = () => {
               />
               <Icon
                 icon="streamline-logos:c-language-logo-solid"
-                className="text-2xl sm:text-3xl dark:text-white text-black lg:text-4xl transition-transform duration-300 transform hover:scale-110"
+                className="text-2xl sm:text-3xl lg:text-4xl transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
                 icon="streamline-logos:c-plus-language-logo-solid"
-                className="text-2xl dark:text-white text-blxl transition-transform duration-300 transform hover:scale-110"
+                className="text-2x transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
                 icon="devicon:php"
@@ -130,16 +130,16 @@ const Skills = () => {
               />
               <Icon
                 icon="simple-icons:phpmyadmin"
-                className="text-xl transition-transform duration-300 transform hover:scale-110 dark:text-white text-black"
+                className="text-xl transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
                 icon="devicon:postman"
-                className="text-xl transition-transform duration-300 transform hover:scale-110 dark:text-white text-black"
+                className="text-xl transition-transform duration-300 transform hover:scale-110"
               />
             </div>
           </div>
           <div>
-            <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
+            <h2 className="text-sm font-semibold mb-4 underline">
               Technical Skills
             </h2>
             <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -156,7 +156,7 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 sm:px-3 sm:py-1.5 dark:text-neutral-300 text-zinc-900 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
                 >
                   {skill}
                 </span>
@@ -164,7 +164,7 @@ const Skills = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
+            <h2 className="text-sm font-semibold mb-4 underline">
               Soft Skills
             </h2>
             <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -180,7 +180,7 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 sm:px-3 sm:py-1.5 dark:text-neutral-300 text-zinc-900 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
                 >
                   {skill}
                 </span>
