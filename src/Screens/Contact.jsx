@@ -6,13 +6,13 @@ const Contact = () => {
       <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-2">
         <div className="w-full">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-center sm:text-left text-gray-950 dark:text-white">
-            Get in touch.
+            Get in touch<span className="text-violet-500">.</span>
           </h1>
         </div>
         <div className="w-full mt-6 flex flex-col items-center gap-3 text-base sm:flex-row sm:justify-end sm:gap-0 sm:text-xl text-right">
           <a
             href="mailto:alrlabajo@gmail.com"
-            className="text-violet-500 hover:underline"
+            className="text-violet-500 dark:text-violet-400 hover:underline"
           >
             email
           </a>
@@ -21,7 +21,7 @@ const Contact = () => {
           </span>
           <a
             href="https://www.linkedin.com/in/likeslabajo"
-            className="text-violet-500 hover:underline"
+            className="text-violet-500 dark:text-violet-400 hover:underline"
           >
             linkedin
           </a>
@@ -30,7 +30,7 @@ const Contact = () => {
           </span>
           <a
             href="https://github.com/alrlabajo"
-            className="text-violet-500 hover:underline"
+            className="text-violet-500 dark:text-violet-400 hover:underline"
           >
             github
           </a>
@@ -39,7 +39,7 @@ const Contact = () => {
           </span>
           <a
             href="https://facebook.com/chkkngs"
-            className="text-violet-500 hover:underline"
+            className="text-violet-500 dark:text-violet-400 hover:underline"
           >
             facebook
           </a>

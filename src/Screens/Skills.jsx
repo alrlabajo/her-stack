@@ -5,12 +5,15 @@ const Skills = () => {
   return (
     <div className="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center w-full max-w-4xl mx-auto my-10 px-4 sm:px-6 lg:px-14">
       <div className="w-full">
-        <h1 className="text-black dark:text-white text-5xl font-bold mb-2 sm:mb-4 text-center">
-          Skills<span className="text-violet-500">.</span>
-        </h1>
-        <p className="text-gray-700 dark:text-gray-300 text-sm mb-8 text-center">
-          These are some of the tools, technologies, and skills I've acquired and honed over time through various projects, coursework, and experiences.
-        </p>
+        <div className="flex flex-col sm:flex-row items-center my-8 gap-4 sm:gap-6 lg:gap-10">
+          <h1 className="text-6xl lg:text-8xl font-semibold text-black dark:text-white leading-none">
+            Skills<span className="text-violet-500">.</span>
+          </h1>
+          <p className="text-xs text-neutral-600 dark:text-neutral-200 leading-relaxed lg:mt-12 max-w-2xl">
+            These are some of the tools, technologies, and skills I've acquired and honed over time
+            through various projects, coursework, and experiences.
+          </p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           <div>
             <h2 className="text-sm font-semibold mb-4 underline dark:text-white text-black">
@@ -153,7 +156,7 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[9px] font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 dark:text-neutral-300 text-zinc-900 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
                 >
                   {skill}
                 </span>
@@ -177,7 +180,7 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[9px] font-medium hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors duration-200"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 dark:text-neutral-300 text-zinc-900 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
                 >
                   {skill}
                 </span>

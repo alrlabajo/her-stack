@@ -15,8 +15,8 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl font-semibold text-left"
           />
         </div>
-        <div className="w-full mt-8 sm:mt-10">
-          <h1 className="text-base sm:text-lg md:text-xl font-regular text-left text-violet-500">
+        <div className="w-full mt-8 sm:mt-10 text-right">
+          <h1 className="text-base sm:text-lg md:text-xl font-regular text-right text-violet-500">
             code. create. inspire
           </h1>
         </div>

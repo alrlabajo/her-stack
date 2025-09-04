@@ -112,7 +112,7 @@ and promote their events using Python Django.`,
     short: "Track your expenses, income, and savings all in one app.",
     long: `A web application that helps users manage their personal finances by tracking expenses, income, and savings in one convenient platform. Designed to provide insights and promote better financial habits.`,
     role: "Fullstack Developer",
-    techstack: ["MONGODB", "EXPRESSJS", 'REACTJS', 'NODEJS', 'TAILWINDCSS'],
+    techstack: ["MONGODB", "EXPRESSJS", "REACTJS", "NODEJS", "TAILWINDCSS"],
     image: "images/trackly.gif",
     link: "",
   },
@@ -126,14 +126,17 @@ export const Projects = () => {
 
   return (
     <>
-      <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-4 px-4 sm:px-6 lg:px-14 mt-16 w-full max-w-4xl ">
+      <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-2 px-4 sm:px-6 lg:px-14 mt-16 w-full max-w-4xl ">
         <div className="w-full">
-          <h1 className="text-black dark:text-white text-5xl font-bold mb-2 sm:mb-4 text-center">
-            Projects<span className="text-violet-500">.</span>
-          </h1>
-          <p className="text-gray-700 dark:text-gray-300 text-sm mb-8 text-center">
-            These projects are combination of my school and personal work. On my free time, I like to create projects that would help solve problems and benefit me and others.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center my-4 gap-4 sm:gap-6 lg:gap-10">
+            <h1 className="text-6xl font-semibold text-black dark:text-white leading-none text-left">
+              Projects<span className="text-violet-500">.</span>
+            </h1>
+            <p className="text-xs text-neutral-600 dark:text-neutral-200 leading-relaxed mt-4 lg:mt-8 max-w-2xl">
+              These projects are combination of my school and personal works. On my free time,
+              I like to create projects that would help solve problems and benefit me and others.
+            </p>
+          </div>
 
           <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent className="-ml-1">
@@ -144,7 +147,7 @@ export const Projects = () => {
                 >
                   <div className="p-1 h-full">
                     <div
-                      className="bg-neutral-100/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 hover:bg-white/20 dark:hover:bg-gray-900/70 transition-all duration-300 cursor-pointer border border-gray-200/20 h-full flex flex-col"
+                      className="bg-neutral-100/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 dark:hover:bg-gray-900/70 transition-all duration-300 cursor-pointer border border-gray-200/20 h-full flex flex-col"
                       onClick={() => openModal(project)}
                     >
                       <img
@@ -153,10 +156,10 @@ export const Projects = () => {
                         className="w-full h-32 object-cover rounded-lg mb-3 sm:mb-4 flex-shrink-0"
                       />
                       <div className="flex-grow flex flex-col">
-                        <h3 className="text-base font-bold text-black dark:text-white mb-2 sm:mb-3 line-clamp-2">
+                        <h3 className="text-sm font-bold text-black dark:text-white mb-2 line-clamp-2">
                           {project.title}
                         </h3>
-                        <p className="text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 text-xs flex-grow line-clamp-3">
+                        <p className="text-gray-700 dark:text-gray-300 mb-2 text-xs flex-grow line-clamp-3">
                           {project.short}
                         </p>
                         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
@@ -165,7 +168,7 @@ export const Projects = () => {
                             .map((tech, techIndex) => (
                               <span
                                 key={techIndex}
-                                className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[8px] font-medium"
+                                className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-zinc-300/30 dark:bg-neutral-400/30 text-zinc-900 dark:text-neutral-300 rounded-full text-[8px] font-medium"
                               >
                                 {tech}
                               </span>
@@ -177,12 +180,12 @@ export const Projects = () => {
                           )}
                         </div>
                         <div className="flex items-center justify-between mt-auto">
-                          <span className="text-xs text-violet-600 dark:text-violet-400 font-medium">
+                          <span className="text-xs text-zinc-900 dark:text-neutral-300 font-medium">
                             {project.role}
                           </span>
                           <Icon
                             icon="tabler:arrow-right"
-                            className="text-violet-500 text-lg sm:text-xl flex-shrink-0 block sm:hidden md:block"
+                            className="text-zinc-900 dark:text-neutral-300 text-lg sm:text-xl flex-shrink-0 block sm:hidden md:block"
                           />
                         </div>
                       </div>
@@ -191,8 +194,8 @@ export const Projects = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex dark:text-white" />
-            <CarouselNext className="hidden sm:flex dark:text-white" />
+            <CarouselPrevious className="hidden lg:flex xl:flex dark:text-white" />
+            <CarouselNext className="hidden lg:flex xl:flex dark:text-white" />
           </Carousel>
 
           {selectedProject && (
@@ -211,27 +214,27 @@ export const Projects = () => {
                   <Icon icon="tabler:x" className="text-xl" />
                 </button>
 
-                <h2 className="text-xl font-bold text-black dark:text-white mb-2 sm:mb-3 pr-8">
+                <h2 className="text-xl font-bold text-black dark:text-white mb-2">
                   {selectedProject.title}
                 </h2>
 
-                <p className="text-violet-600 dark:text-violet-400 font-medium mb-3 sm:mb-4 text-sm">
+                <p className="text-violet-600 dark:text-violet-400 font-medium mb-2 text-sm">
                   {selectedProject.role}
                 </p>
 
-                <p className="text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed text-xs">
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-xs">
                   {selectedProject.long}
                 </p>
 
-                <div className="mb-4">
+                <div className="mb-2">
                   <h3 className="text-sm font-semibold text-black dark:text-white mb-2">
                     Tech Stack:
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-4">
                     {selectedProject.techstack.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 sm:px-3 sm:py-1.5 bg-violet-300/30 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-[10px] font-medium"
+                        className="px-3 py-1 dark:text-neutral-300 text-zinc-900 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
                       >
                         {tech}
                       </span>
@@ -239,14 +242,14 @@ export const Projects = () => {
                     <img
                       src={selectedProject.image}
                       alt={selectedProject.title}
-                      className="w-full h-24 sm:h-40 lg:h-48 object-cover rounded-lg mb-3 sm:mb-4"
+                      className="w-full h-24 sm:h-40 lg:h-48 object-cover rounded-lg mb-2"
                     />
                   </div>
                 </div>
                 {selectedProject.link && selectedProject.link.trim() !== "" && (
                   <button
                     onClick={() => window.open(selectedProject.link, "_blank")}
-                    className="mt-4 w-full bg-violet-600 dark:bg-violet-500 text-white rounded-lg py-2 font-medium hover:bg-violet-700 dark:hover:bg-violet-400"
+                    className="mt-4 w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-lg py-2 font-medium hover:bg-zinc-700 dark:hover:bg-neutral-400"
                   >
                     View Project
                   </button>
