@@ -205,12 +205,12 @@ export const Projects = () => {
               onClick={closeModal}
             >
               <div
-                className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg w-full max-w-xs sm:max-w-lg lg:max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto p-4 sm:p-6 relative shadow-xl"
+                className="rounded-lg w-full bg-white text-zinc-950 max-w-xs sm:max-w-lg lg:max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto p-4 sm:p-6 relative shadow-xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={closeModal}
-                  className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 z-10 bg-white/80 dark:bg-gray-800/80 rounded-full p-1"
+                  className="absolute top-2 right-2 sm:top-4 sm:right-4 rounded-full p-1"
                 >
                   <Icon icon="tabler:x" className="text-xl" />
                 </button>
