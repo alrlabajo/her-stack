@@ -101,7 +101,7 @@ const Skills = () => {
                 className="text-xl transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
-                icon="devicon:pvewire"
+                icon="devicon:livewire"
                 className="text-xl transition-transform duration-300 transform hover:scale-110"
               />
               <Icon
