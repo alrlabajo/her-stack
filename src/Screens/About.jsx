@@ -89,9 +89,14 @@ const About = () => {
           <div className="flex flex-row gap-8 lg:gap-12 items-center md:items-start">
             <div className="flex-1 space-y-3">
               <div className="h-10 md:min-h-[60px] flex items-center">
-                <h1 className="text-gray-900 dark:text-white text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 sm:mb-4 md:mb-4">
-                  Angelika Louise<span className="text-violet-500">.</span>
-                </h1>
+                <TextType
+                  text={["Angelika Louise", "Lyka", "Likes"]}
+                  typingSpeed={150}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  className="text-4xl sm:text-5xl md:text-6xl font-semibold text-left text-gray-950 dark:text-white"
+                />
               </div>
 
               <div className="flex items-center justify-center md:justify-start">
