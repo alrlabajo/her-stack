@@ -116,6 +116,15 @@ and promote their events using Python Django.`,
     image: "images/trackly.gif",
     link: "",
   },
+  {
+    title: "FaithFinder",
+    short: "Find spiritual guidance and community events.",
+    long: `FaithFinder is a mobile-first web application that helps people seeking spiritual guidance find nearby churches, discover community events, and share prayer requests. It also empowers small community churches to be more visible and connect with people in their area. The app is open to all denominations, free for public use, and requires no downloading.`,
+    role: "Fullstack Developer",
+    techstack: ["MONGODB", "EXPRESSJS", "REACTJS", "NODEJS", "TAILWINDCSS"],
+    image: "images/faithfinder.png",
+    link: "https://faithfinders.vercel.app/",
+  },
 ];
 
 export const Projects = () => {
@@ -230,7 +239,7 @@ export const Projects = () => {
                   <h3 className="text-sm font-semibold text-black dark:text-white mb-2">
                     Tech Stack:
                   </h3>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-2">
                     {selectedProject.techstack.map((tech, index) => (
                       <span
                         key={index}
