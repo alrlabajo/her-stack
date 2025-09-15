@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { NAV_MENU_DATA as Menu } from "../utils/data";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        return savedTheme === "dark";
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -12,6 +22,32 @@ const Navbar = () => {
     if (isMenuOpen) setIsMenuOpen(false);
     navigate(path);
   };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const shouldBeDark = savedTheme ? savedTheme === "dark" : systemPrefersDark;
+
+    if (shouldBeDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    setDarkMode(shouldBeDark);
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center">
@@ -21,7 +57,6 @@ const Navbar = () => {
             <Icon icon="gridicons:code" />
           </span>
         </div>
-
         {/* Hamburger menu */}
         <div className="md:hidden z-30">
           <button
@@ -46,15 +81,15 @@ const Navbar = () => {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden md:block"
-          } fixed inset-0 bg-neutral-50 dark:bg-zinc-950 backdrop-blur-sm z-20 flex flex-col items-center justify-center md:relative md:bg-transparent md:backdrop-blur-none md:flex md:justify-center md:flex-row`}
+          } fixed inset-0 backdrop-blur-lg z-20 flex flex-col items-center justify-center md:relative md:bg-transparent md:backdrop-blur-none md:flex md:justify-center md:flex-row`}
         >
           <ul className="flex flex-col items-center md:flex-row md:space-y-0 gap-x-7">
             {Menu.map((item) => (
               <li key={item.id} className="mb-6 md:mb-0">
                 <button
-                  className={` hover:text-violet-500 block transition ease-linear text-base px-2 py-1 rounded-full text-gray-950 dark:text-white ${
+                  className={` hover:text-violet-500 block transition ease-linear text-base px-2 py-1 rounded-full ${
                     location.pathname === item.path
-                      ? "font-bold text-gray-700 underline"
+                      ? "font-bold underline"
                       : "hover:text-violet-500"
                   }`}
                   onClick={() => handleClick(item.path)}
@@ -69,6 +104,17 @@ const Navbar = () => {
             >
               <span>Hire me</span>
             </a>
+            <button
+              className="p-2 rounded-full transition mt-4 sm:mt-0"
+              onClick={() => setDarkMode((prev) => !prev)}
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? (
+                <Icon icon="ph:sun-bold" className="text-2xl" />
+              ) : (
+                <Icon icon="ph:moon-bold" className="text-2xl" />
+              )}
+            </button>
           </ul>
         </nav>
       </div>
