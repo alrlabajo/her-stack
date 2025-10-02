@@ -30,7 +30,7 @@ const About = () => {
           </h3>
           <span className="text-xs font-semibold">July 2024 - August 2024</span>
         </div>
-        <p className="text-gray-600 italic text-xs ">eTap Solutions Inc.</p>
+        <p className="text-gray-600 italic text-xs ">eTap Solutions</p>
         <ul className="space-y-1">
           <li className="flex items-start text-xs">
             <span className="w-1.5 h-1.5 bg-gray-800 rounded-sm mt-2 mr-3 flex-shrink-0"></span>
