@@ -16,7 +16,7 @@ const About = () => {
         <h3 className="text-sm font-semibold">
           Bachelor of Science in Computer Science
         </h3>
-        <p className="text-gray-600 italic text-xs">
+        <p className="text-gray-500 italic text-xs">
           Pamantasan ng Lungsod ng Maynila
         </p>
         <span className="text-xs font-semibold">2021 - 2025</span>
@@ -121,7 +121,7 @@ const About = () => {
                     className={`py-2 px-4 focus:outline-none transition-colors duration-200 relative ${
                       activeTab === tab.id
                         ? "border-b-2 border-violet-500 text-violet-500 font-semibold -mb-px"
-                        : "text-gray-600 hover:text-violet-500"
+                        : "text-gray-500 hover:text-violet-500"
                     }`}
                     onClick={() => setActiveTab(tab.id)}
                   >
