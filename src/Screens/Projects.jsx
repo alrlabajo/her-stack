@@ -15,7 +15,7 @@ const projects = [
     long: `Contributed to the front-end development for the budgeting office of the Pamantasan ng
 Lungsod ng Maynila, created by PLM 3rd year BS Computer Science students using the
 Laravel Framework.`,
-    role: "Support Programmer",
+    role: "Frontend Programmer",
     techstack: [
       "PHP",
       "HTML5",
@@ -59,13 +59,17 @@ and promote their events using Python Django.`,
     role: "Frontend Developer",
     techstack: ["PYTHON", "DJANGO", "HTML5", "TAILWINDCSS", "GIT"],
     image: "images/VizKidz.jpg",
+    images: [
+      "images/VizKidz.jpg",
+      "images/vizkidz.png",
+    ],
     link: "",
   },
   {
     title: "PhishPatrol",
     short: "An Android mobile application to detect Filipino phishing SMS.",
     long: "Contributed to the development of PhishPatrol, designed to classify incoming messages whether it is a phishing message or not, using the enhanced Generalized Mean Distance K-Nearest Neighbor algorithm.",
-    role: "Programmer",
+    role: "Fullstack Programmer",
     techstack: [
       "DART",
       "PYTHON",
@@ -104,7 +108,29 @@ and promote their events using Python Django.`,
     long: `A straightforward yet effective desktop application that combines a markdown text editor and a Kanban board. This makes task management and note-taking easy in one place, which is designed to enhance productivity and focus.`,
     role: "Designer",
     techstack: ["FIGMA"],
-    image: "images/Board-2.png",
+    image: "images/KanDo/Board-2.png",
+    images: [
+      "images/KanDo/Board.png",
+      "images/KanDo/Board-1.png",
+      "images/KanDo/Board-2.png",
+      "images/KanDo/Board-3.png",
+      "images/KanDo/Board-4.png",
+      "images/KanDo/Board-5.png",
+      "images/KanDo/Board-6.png",
+      "images/KanDo/Board-7.png",
+      "images/KanDo/Board-8.png",
+      "images/KanDo/Board-9.png",
+      "images/KanDo/Board-10.png",
+      "images/KanDo/Board-11.png",
+      "images/KanDo/Board-12.png",
+      "images/KanDo/Board-13.png",
+      "images/KanDo/Notes-1.png",
+      "images/KanDo/Notes-2.png",
+      "images/KanDo/Notes-3.png",
+      "images/KanDo/Notes.png",
+      "images/KanDo/Splash.png",
+      "images/KanDo/Splash-1.png",
+    ],
     link: "",
   },
   {
@@ -123,15 +149,62 @@ and promote their events using Python Django.`,
     role: "Fullstack Developer",
     techstack: ["MONGODB", "EXPRESSJS", "REACTJS", "NODEJS", "TAILWINDCSS"],
     image: "images/faithfinder.png",
+    images: [
+      "images/faithfinder1.jpg",
+      "images/faithfinder2.jpg",
+      "images/faithfinder3.jpg",
+      "images/faithfinder4.jpg",
+    ],
     link: "https://faithfinders.vercel.app/",
+  },
+  {
+    title: "UBRA",
+    short: `Workforce. Delivered.
+Build a global, remote team in <72 hours. No HR overhead. No hiring delays. Just results.`,
+    long: `Contributed to the design of UBRA website, from landing page, partner page, to user dashboard. User dashboard is still in progress. This project is a side hussle I did with a friend who is the founder of UBRA.`,
+    role: "Designer",
+    techstack: ["FRAMER"],
+    image: "images/UBRA.gif",
+    images: [
+      "images/UBRA.gif",
+    ],
+    link: "https://www.ubra.work/",
   },
 ];
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const openModal = (project) => setSelectedProject(project);
-  const closeModal = () => setSelectedProject(null);
+  const openModal = (project, startIndex = 0) => {
+    setSelectedProject(project);
+    setSelectedImageIndex(startIndex);
+  };
+  const closeModal = () => {
+    setSelectedProject(null);
+    setSelectedImageIndex(0);
+  };
+
+  const prevImage = () => {
+    if (!selectedProject) return;
+    const imgs =
+      selectedProject.images ??
+      (selectedProject.image ? [selectedProject.image] : []);
+    setSelectedImageIndex((i) => (i - 1 + imgs.length) % imgs.length);
+  };
+
+  const nextImage = () => {
+    if (!selectedProject) return;
+    const imgs =
+      selectedProject.images ??
+      (selectedProject.image ? [selectedProject.image] : []);
+    setSelectedImageIndex((i) => (i + 1) % imgs.length);
+  };
+
+  const modalImages = selectedProject
+    ? selectedProject.images ??
+      (selectedProject.image ? [selectedProject.image] : [])
+    : [];
 
   return (
     <>
@@ -158,7 +231,7 @@ export const Projects = () => {
                   <div className="p-1 h-full">
                     <div
                       className="backdrop-blur-sm rounded-lg p-4 transition-all duration-300 cursor-pointer border border-gray-500/35 h-full flex flex-col"
-                      onClick={() => openModal(project)}
+                      onClick={() => openModal(project, 0)}
                     >
                       <img
                         src={project.image}
@@ -240,7 +313,7 @@ export const Projects = () => {
                   <h3 className="text-sm font-semibold text-black dark:text-white mb-2">
                     Tech Stack:
                   </h3>
-                  <div className="flex flex-wrap gap-y-4 space-x-2">
+                  <div className="flex flex-wrap gap-2">
                     {selectedProject.techstack.map((tech, index) => (
                       <span
                         key={index}
@@ -249,12 +322,73 @@ export const Projects = () => {
                         {tech}
                       </span>
                     ))}
-                    <img
-                      src={selectedProject.image}
-                      alt={selectedProject.title}
-                      className="w-full h-24 sm:h-40 lg:h-48 object-cover rounded-lg mb-2"
-                    />
                   </div>
+
+                  {/* Modal images  */}
+                  {modalImages.length > 0 && (
+                    <div className="mt-4">
+                      <div className="relative">
+                        <img
+                          src={modalImages[selectedImageIndex]}
+                          alt={`${selectedProject.title} - ${
+                            selectedImageIndex + 1
+                          }`}
+                          className="w-full h-auto object-cover rounded-lg mb-2"
+                        />
+
+                        {modalImages.length > 1 && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                prevImage();
+                              }}
+                              className="absolute left-2 top-1/2 -translate-y-1/2 bg-neutral-900 text-white rounded-full p-2 shadow"
+                              aria-label="Previous image"
+                            >
+                              ‹
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                nextImage();
+                              }}
+                              className="absolute right-2 top-1/2 -translate-y-1/2 bg-neutral-900 text-white rounded-full p-2 shadow"
+                              aria-label="Next image"
+                            >
+                              ›
+                            </button>
+                          </>
+                        )}
+                      </div>
+
+                      {modalImages.length > 1 && (
+                        <div className="flex gap-2 mt-2 justify-center">
+                          {modalImages.map((img, i) => (
+                            <button
+                              key={i}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedImageIndex(i);
+                              }}
+                              className={`w-12 h-8 overflow-hidden rounded ${
+                                i === selectedImageIndex
+                                  ? "ring-2 ring-zinc-900"
+                                  : "ring-0"
+                              }`}
+                              aria-label={`Show image ${i + 1}`}
+                            >
+                              <img
+                                src={img}
+                                alt={`thumb-${i}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
                 {selectedProject.link && selectedProject.link.trim() !== "" && (
                   <button
