@@ -121,7 +121,7 @@ const About = () => {
                     className={`py-2 px-4 focus:outline-none transition-colors duration-200 relative ${
                       activeTab === tab.id
                         ? "border-b-2 border-violet-500 text-violet-500 font-semibold -mb-px"
-                        : "text-gray-500 hover:text-violet-500"
+                        : "text-gray-400 hover:text-violet-500"
                     }`}
                     onClick={() => setActiveTab(tab.id)}
                   >

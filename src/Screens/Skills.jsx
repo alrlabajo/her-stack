@@ -156,7 +156,7 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] font-medium border"
                 >
                   {skill}
                 </span>
@@ -180,7 +180,7 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] font-medium border dark:border-neutral-300 border-zinc-900"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] font-medium border"
                 >
                   {skill}
                 </span>

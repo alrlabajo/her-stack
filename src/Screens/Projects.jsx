@@ -230,7 +230,7 @@ export const Projects = () => {
                 >
                   <div className="p-1 h-full">
                     <div
-                      className="backdrop-blur-sm rounded-lg p-4 transition-all duration-300 cursor-pointer border border-gray-500/35 h-full flex flex-col"
+                      className="backdrop-blur-sm rounded-lg p-4 transition-all duration-300 cursor-pointer border border-gray-500/50 h-full flex flex-col"
                       onClick={() => openModal(project, 0)}
                     >
                       <img
